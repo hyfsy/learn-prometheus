@@ -1,4 +1,4 @@
-package com.hyf.prometheus;
+package com.hyf.prometheus.use;
 
 import io.prometheus.client.*;
 import io.prometheus.client.exporter.PushGateway;
@@ -12,7 +12,7 @@ import java.util.Map;
  * @author baB_hyf
  * @date 2021/07/09
  */
-public class Test1 {
+public class UseCase {
 
     public static void main(String[] args) {
 

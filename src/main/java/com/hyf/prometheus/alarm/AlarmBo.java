@@ -1,6 +1,4 @@
-package com.hyf.prometheus;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
+package com.hyf.prometheus.alarm;
 
 import java.util.Date;
 import java.util.List;

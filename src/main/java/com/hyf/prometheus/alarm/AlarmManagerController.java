@@ -1,4 +1,4 @@
-package com.hyf.prometheus;
+package com.hyf.prometheus.alarm;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
