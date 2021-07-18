@@ -1,27 +1,25 @@
-package com.hyf.prometheus.alarm;
+package com.hyf.prometheus.alarm.bo;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 /**
- * 告警通知信息实体
+ * AlertManager的告警通知信息实体
  *
  * @author baB_hyf
  * @date 2021/07/10
  */
-public class AlarmBo {
+public class AlertManagerAlarmBo<T> extends AlarmBo<AlertManagerAlarmBo.Alert> {
 
     private String              version;
     private String              groupKey;
     private int                 truncatedAlerts;
-    private String              status; // resolved/firing
+    private String              status; // firing/resolved
     private String              receiver;
     private Map<String, String> groupLabels;
     private Map<String, String> commonLabels;
     private Map<String, String> commonAnnotations;
     private String              externalURL;
-    private List<Alert>         alerts;
 
     public String getVersion() {
         return version;
@@ -95,17 +93,9 @@ public class AlarmBo {
         this.externalURL = externalURL;
     }
 
-    public List<Alert> getAlerts() {
-        return alerts;
-    }
-
-    public void setAlerts(List<Alert> alerts) {
-        this.alerts = alerts;
-    }
-
     @Override
     public String toString() {
-        return "AlarmBo{" +
+        return "AlertManagerAlarmBo{" +
                 "version='" + version + '\'' +
                 ", groupKey='" + groupKey + '\'' +
                 ", truncatedAlerts=" + truncatedAlerts +
@@ -115,7 +105,7 @@ public class AlarmBo {
                 ", commonLabels=" + commonLabels +
                 ", commonAnnotations=" + commonAnnotations +
                 ", externalURL='" + externalURL + '\'' +
-                ", alerts=" + alerts +
+                ", alerts=" + getAlerts() +
                 '}';
     }
 
